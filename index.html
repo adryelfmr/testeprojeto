@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" src="./main.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        overflow: hidden;
+      }
+
+      .full-screen {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .options-menu {
+        position: fixed;
+        min-width: unset;
+        top: 5px;
+        right: 5px;
+        max-height: calc(100vh - 10px);
+      }
+
+      .phone-menu-toggler {
+        visibility: hidden;
+      }
+
+      #container {
+        width: 100vh;
+        height: 100vh;
+        border: 1px solid black; /* Opcional, apenas para visualizar os limites */
+      }
+      @media (max-width: 480px) {
+        .options-menu {
+          visibility: hidden;
+          bottom: 5px;
+          left: 5px;
+        }
+
+        .options-menu-visible {
+          visibility: visible;
+        }
+
+        .phone-menu-toggler {
+          visibility: visible;
+          position: fixed;
+          top: 5px;
+          right: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
